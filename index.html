@@ -581,50 +581,61 @@
     }
 
     /* Brand */
-    #brand {
-        margin-bottom: 10px;
-    }
+       #brand {
+    margin-bottom: 10px;
+    text-align: center; /* Center align the brand heading */
+}
 
-    .brand_heading {
-        text-align: center;
-        height: 50px;
-        margin: 2% 9%;
-        border: 1px dotted;
-    }
+.brand_heading {
+    height: 50px;
+    margin: 2% 9%;
+    border: 1px dotted;
+    display: flex;
+    justify-content: center; /* Center align the items in the flex container */
+    align-items: center; /* Center align the items vertically */
+}
 
-    .brandpostion {
-        margin: 2% 9%;
-    }
+.brandpostion {
+    margin: 2% 9%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the items in the flex container */
+}
 
+.brands {
+    margin: 10px; /* Adjust margin for spacing between items */
+    height: 195px;
+    width: calc(16.666% - 20px); /* Set width to 16.666% minus margin */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.brand_links {
+    text-decoration: none;
+}
+
+.brand_img {
+    height: 180px;
+    width: 100%;
+}
+
+@media (min-width: 1400px) {
+    .brand_img:hover {
+        height: 200px;
+    }
+}
+
+@media (max-width: 1199px) { /* Added media query for tablet layout */
     .brands {
-        margin-left: 10px;
-        height: 195px;
-        width: 195px;
-        display: inline;
+        width: calc(33.33% - 20px); /* Set width to 33.33% minus margin for tablet layout */
     }
+}
 
-    .brand_links {
-        text-decoration: none;
+@media (max-width: 767px) { /* Added media query for phone layout */
+    .brands {
+        width: calc(50% - 20px); /* Set width to 50% minus margin for phone layout */
     }
-
-    .brand_img {
-        height: 180px;
-        width: 180px;
-    }
-
-    @media (min-width: 1400px) {
-        .brand_img:hover {
-            height: 200px;
-            width: 200px;
-        }
-    }
-
-    @media (max-width: 766px) {
-        .brands {
-            margin-left: 120px;
-        }
-    }
-
+}
     /* Footer */
     #footer {
         height: 225px;
