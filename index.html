@@ -85,12 +85,12 @@
                             My account <i class="fa-solid fa-user profile_logo"></i>
                         </a>
                     </li>
-                    <form>
-                        <input class="searchbox" type="search" placeholder="Search">
-                        <button class="searchbutton" onclick="search()">
-                            <i class="fa-solid fa-magnifying-glass searchicon"></i>
+                    <div class="searchbox-container">
+                        <input type="text" class="searchbox" placeholder="Search">
+                        <button class="searchbutton">
+                            <i class="fa fa-search searchicon"></i>
                         </button>
-                    </form>
+                    </div>
                     <script src="grocer_account_page.js"></script>
                 </ul>
             </div>
@@ -306,43 +306,46 @@
             </h3>
         </div>
         <div class="brandpostion row">
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-6 col-md-6 col-sm-6 col-6">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://i.pinimg.com/564x/a3/84/e8/a384e85d580188cfc0954acb6de6a3c4.jpg">
                 </a>
             </div>
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-6 col-md-6 col-sm-6 col-6">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://i.pinimg.com/236x/13/ad/a7/13ada78b96bb8efa813aa58e2710fbef.jpg">
                 </a>
             </div>
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-4 col-md-4 col-sm-4 col-4">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://i.pinimg.com/564x/b0/fe/a4/b0fea4aaddd004431e7de3f57b13d33a.jpg">
                 </a>
             </div>
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-4 col-md-4 col-sm-4 col-4">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://i.pinimg.com/564x/06/50/0b/06500b420e878d50d51f2147b322b842.jpg">
                 </a>
             </div>
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-4 col-md-4 col-sm-4 col-4">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://i.pinimg.com/564x/ba/c7/30/bac730673b9d32880d60ad697798dbaf.jpg">
                 </a>
             </div>
-            <div class="brands  col-md-6 col-sm-6">
+            <div class="brands col-lg-4 col-md-4 col-sm-4 col-4">
                 <a class="brand_links" href="">
                     <img class="brand_img"
                         src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Dabur_Logo.svg/1200px-Dabur_Logo.svg.png">
                 </a>
             </div>
         </div>
+
+    </section>
+
     </section>
     <!-- Footer -->
     <section id="footer">
@@ -441,6 +444,37 @@
             text-align: right;
             font-weight: bold;
         }
+
+        .search-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .searchbox {
+            height: 42px;
+            margin-left: 10;
+            border: 1px solid rgb(146, 226, 27);
+            text-decoration: none;
+            display: inline-block;
+            /* Add display: inline-block to keep the search bar on the same line */
+        }
+
+        .searchbutton {
+            margin-top: 10px;
+        }
+
+        .dropdown-content {
+            position: static;
+            /* Override the default dropdown positioning */
+        }
+
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .searchbox {
@@ -581,61 +615,74 @@
     }
 
     /* Brand */
-       #brand {
-    margin-bottom: 10px;
-    text-align: center; /* Center align the brand heading */
-}
-
-.brand_heading {
-    height: 50px;
-    margin: 2% 9%;
-    border: 1px dotted;
-    display: flex;
-    justify-content: center; /* Center align the items in the flex container */
-    align-items: center; /* Center align the items vertically */
-}
-
-.brandpostion {
-    margin: 2% 9%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align the items in the flex container */
-}
-
-.brands {
-    margin: 10px; /* Adjust margin for spacing between items */
-    height: 195px;
-    width: calc(16.666% - 20px); /* Set width to 16.666% minus margin */
-    box-sizing: border-box;
-    padding: 5px;
-}
-
-.brand_links {
-    text-decoration: none;
-}
-
-.brand_img {
-    height: 180px;
-    width: 100%;
-}
-
-@media (min-width: 1400px) {
-    .brand_img:hover {
-        height: 200px;
+    #brand {
+        margin-bottom: 10px;
+        text-align: center;
+        /* Center align the brand heading */
     }
-}
 
-@media (max-width: 1199px) { /* Added media query for tablet layout */
+    .brand_heading {
+        height: 50px;
+        margin: 2% 9%;
+        border: 1px dotted;
+        display: flex;
+        justify-content: center;
+        /* Center align the items in the flex container */
+        align-items: center;
+        /* Center align the items vertically */
+    }
+
+    .brandpostion {
+        margin: 2% 9%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Center align the items in the flex container */
+    }
+
     .brands {
-        width: calc(33.33% - 20px); /* Set width to 33.33% minus margin for tablet layout */
+        margin: 10px;
+        /* Adjust margin for spacing between items */
+        height: 195px;
+        width: calc(16.666% - 20px);
+        /* Set width to 16.666% minus margin */
+        box-sizing: border-box;
+        padding: 5px;
     }
-}
 
-@media (max-width: 767px) { /* Added media query for phone layout */
-    .brands {
-        width: calc(50% - 20px); /* Set width to 50% minus margin for phone layout */
+    .brand_links {
+        text-decoration: none;
     }
-}
+
+    .brand_img {
+        height: 180px;
+        width: 100%;
+    }
+
+    @media (min-width: 1400px) {
+        .brand_img:hover {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 1199px) {
+
+        /* Added media query for tablet layout */
+        .brands {
+            width: calc(33.33% - 20px);
+            /* Set width to 33.33% minus margin for tablet layout */
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        /* Added media query for phone layout */
+        .brands {
+            width: calc(50% - 20px);
+            /* Set width to 50% minus margin for phone layout */
+        }
+    }
+
     /* Footer */
     #footer {
         height: 225px;
