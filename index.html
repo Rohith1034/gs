@@ -85,16 +85,17 @@
                             My account <i class="fa-solid fa-user profile_logo"></i>
                         </a>
                     </li>
-                    <div class="searchbox-container">
-                        <input type="text" class="searchbox" placeholder="Search">
-                        <button class="searchbutton">
-                            <i class="fa fa-search searchicon"></i>
-                        </button>
-                    </div>
                     <script src="grocer_account_page.js"></script>
                 </ul>
             </div>
+            <div class="searchbox-container">
+                <input type="text" class="searchbox" placeholder="Search">
+                <button class="searchbutton">
+                    <i class="fa fa-search searchicon"></i>
+                </button>
+            </div>
         </nav>
+        
         <!-- Titles -->
         <div class="row maintitles ">
             <div class="col-lg-6">
@@ -429,47 +430,7 @@
         margin-left: 5px;
     }
 
-    @media (max-width: 1028px) {
-        .navmedia {
-            font-size: 15px;
-            font-weight: bold;
-        }
 
-        #title {
-            text-align: center;
-        }
-
-        /* For test-alignment of nav-item */
-        .ns {
-            text-align: right;
-            font-weight: bold;
-        }
-
-        .search-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .searchbox {
-            height: 42px;
-            margin-left: 10;
-            border: 1px solid rgb(146, 226, 27);
-            text-decoration: none;
-            display: inline-block;
-            /* Add display: inline-block to keep the search bar on the same line */
-        }
-
-        .searchbutton {
-            margin-top: 10px;
-        }
-
-        .dropdown-content {
-            position: static;
-            /* Override the default dropdown positioning */
-        }
-
-    }
 
     .search-container {
         display: flex;
@@ -493,10 +454,21 @@
         border: 1px solid white;
         background-color: white;
         height: 40px;
+        margin-left: 3px;
     }
 
     .searchicon {
         color: rgb(146, 226, 27);
+    }
+
+    @media (max-width:1470px) {
+        .main_head {
+            display: none;
+        }
+
+        .navbar-logo1 {
+            display: none;
+        }
     }
 
     .maintitles {
@@ -511,13 +483,14 @@
 
     @media (max-width: 1000px) {
         .main-carousel {
-            align-items: center;
+            align-items: right;
         }
     }
 
     .doownload-btn {
         margin: 5% 3% 5% 0;
     }
+
 
     /* Features */
     #features {
