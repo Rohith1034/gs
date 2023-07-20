@@ -1,3 +1,4 @@
+
 var user_name = "";
 function collect() {
   user_name = document.querySelectorAll("input")[0].value;
@@ -17,7 +18,7 @@ function redirect() {
 
 
 function search() {
-  var searchInput = document.querySelector(".searchbox").value.toLowerCase();
+  var searchInput = document.querySelector(".search-data").value.toLowerCase();
   var cardTitles = document.querySelectorAll(".card-title");
   var count = 0;
   
